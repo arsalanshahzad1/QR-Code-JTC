@@ -1,0 +1,302 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 100px;
+  padding-top: 20px;
+}
+.header .right button{
+  background: #e0201c; 
+  border-radius: 8px;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px 50px;
+  height: 50px;
+  border: none;outline: none;
+  cursor: pointer;
+}
+.header .right{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+margin-top: -20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left{
+  display: flex;
+  align-items: center;
+}
+.header .left .logo{
+  width: 150px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+.wrapper .mainContent {
+  background: white;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+padding-top: 50px;
+}
+
+form h1{
+  padding-left: 10px;
+  /* margin-bottom: 20px; */
+  font-size: 25px;
+}
+.inputForm {
+  margin-bottom: 30px;
+}
+
+.inputForm input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.inputForm input:focus {
+  border: 1px solid red;
+
+  outline: none; /* Remove default outline */
+}
+.inputForm button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0201c;
+
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.qrSection {
+  margin-top: 50px;
+}
+
+.qrSection h1{
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 25px;
+line-height: 33px;
+text-align: center;
+}
+.qrSection h1 span{
+color: #e0201c;
+}
+
+.qrCodeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .mainContent {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+}
+@media (max-width: 768px) {
+  .header{
+    padding-inline: 50px;
+  }
+  .header .right button{
+    padding: 10px 40px;
+  }
+}
+@media (max-width: 500px) {
+  .header{
+    padding-inline: 20px;
+  }
+  .header .right button{
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 380px) {
+  .header{
+    padding-inline: 20px;
+  }
+  .header .right button{
+    padding: 8px 20px;
+    height: 40px;
+  }
+  
+.header .left .logo {
+  width: 120px;
+
+}
+form h1{
+  font-size: 1.2em;
+}
+.wrapper .mainContent {
+
+padding-top: 20px;
+}
+.qrSection h1 {
+  
+  font-size: 20px;
+  line-height: 25px;
+}
+
+
+.inputForm input{
+  margin-bottom: 10px;
+} 
+}
+
+
+
+/* [---------------login-sec-----------------------------------] */
+.login-sec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height, adjust as needed */
+  padding-inline: 50px;
+}
+.logimg{
+  width: 150px;
+}
+.login-sec h1{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3e3e3e;
+}
+
+.login-sec p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3e3e3e;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form-con{
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  text-align: left;
+}
+.form-con label{
+  margin-top: 16px;
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a7a6a6;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.form-con .email-input .email-input-field{
+  width: 100%;
+  height: 45px;
+  outline: none;
+  padding: .375rem 35px !important;
+  border-radius: 5px;
+  background-color: #ebeaea;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-con .email-input .email-input-field input{
+border: none;
+outline: none;
+background: none;
+width: 100%;
+}
+
+.form-con .email-input .email-input-field img{
+  width: 100%;
+  max-width: 15px;
+}
+.form-con .password-input .pass-input-field{
+  width: 100%;
+  height: 45px;
+  outline: none;
+  padding: .375rem 35px !important;
+  border-radius: 5px;
+  background-color: #ebeaea;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-con .password-input .pass-input-field input{
+border: none;
+outline: none;
+background: none;
+width: 100%;
+}
+
+.form-con button{
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #e0201c;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* Loader.css */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it is on top of all other content */
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1); /* Light grey border */
+  border-left: 8px solid #007bff; /* Blue border for the spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
