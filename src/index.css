@@ -1,0 +1,48 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.account-form .form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.account-form .form-group input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 0 30px;
+  height: 50px;
+}
+
+.account-form .form-group button {
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    128.21deg,
+    #ffb600 -38.08%,
+    #e032e6 60.31%,
+    #2800d7 150.83%
+  );
+  box-shadow: 2.419px 9.703px 12.48px 0.52px
+    linear-gradient(to right, #185a9d, #43cea2);
+  width: auto;
+  padding: 0 45px;
+  color: #ffffff;
+  margin-top: 20px;
+}
