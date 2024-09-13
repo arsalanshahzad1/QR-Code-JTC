@@ -55,7 +55,7 @@ form h1{
   font-size: 25px;
 }
 .inputForm {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .inputForm input {
@@ -64,7 +64,6 @@ form h1{
   border-radius: 4px;
   width: 100%;
   margin-right: 10px;
-  margin-bottom: 30px;
 }
 
 .inputForm input:focus {
@@ -85,7 +84,7 @@ form h1{
 
 
 .qrSection {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .qrSection h1{
@@ -157,9 +156,6 @@ padding-top: 20px;
 }
 
 
-.inputForm input{
-  margin-bottom: 10px;
-} 
 }
 
 

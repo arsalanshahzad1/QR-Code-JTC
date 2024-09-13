@@ -46,7 +46,7 @@ const Scan = () => {
               <div className="qrCodeContainer">
                 <QRCode
                   size={256}
-                  style={{ height: "auto", maxWidth: "70%", width: "100%" }}
+                  style={{ height: "auto", maxWidth: "60%", width: "100%" }}
                   value={qrCodeValue}
                 />
               </div>
