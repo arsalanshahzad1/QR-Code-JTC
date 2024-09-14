@@ -51,6 +51,19 @@ const Header = () => {
         <img className="logo" src={logo} alt="logo" />
       </div>
       <div className='right'>
+        {isFullscreen === true ? (
+          <FaMinimize
+          onClick={() => fullScreen()}
+          style={{ cursor: "pointer" }}
+          size={30}
+            />
+          ) : (
+            <FaMaximize
+              onClick={() => fullScreen()}
+              style={{ cursor: "pointer" }}
+              size={30}
+              />
+            )}
         <button onClick={handleLogout}>Logout</button>
       </div>
     </div>
