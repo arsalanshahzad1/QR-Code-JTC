@@ -3,6 +3,7 @@ import logo from "../../src/assets/logo.png";
 import { useNavigate } from 'react-router-dom';
 import apis from '../services';
 import Loader from './Loader';
+import { FaMaximize } from 'react-icons/fa6';
 
 const Header = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
