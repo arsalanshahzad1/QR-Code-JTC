@@ -49,6 +49,7 @@ const Scan = () => {
                   style={{ height: "auto", maxWidth: "60%", width: "100%" }}
                   value={qrCodeValue}
                 />
+                <span>{qrCodeValue}</span>
               </div>
             </div>
           )}
