@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import QRCode from "react-qr-code";
 import Header from "../components/Header";
 import Loader from "../components/Loader"; // Adjust the import path as needed
+import { toast } from "react-hot-toast";
 
 const Scan = () => {
   const [amount, setAmount] = useState("");
@@ -9,6 +10,10 @@ const Scan = () => {
   const [loading, setLoading] = useState(false);
 
   const submitHandler = (e) => {
+    if(!amount)
+    {
+      toast.error("Amout field required", { id: 1 });
+    }
     e.preventDefault();
     setLoading(true);
     // Simulate loading time (you can adjust or remove this timeout based on your actual implementation)
@@ -21,7 +26,6 @@ const Scan = () => {
       setLoading(false); // Hide loader once QR code is set
     }, 1000); // Simulate network delay or processing time
   };
-
   return (
     <>
       <Header />
@@ -49,7 +53,7 @@ const Scan = () => {
                   style={{ height: "auto", maxWidth: "60%", width: "100%" }}
                   value={qrCodeValue}
                 />
-                <span>{qrCodeValue}</span>
+                <span>{JSON.parse(qrCodeValue).amount}</span>
               </div>
             </div>
           )}

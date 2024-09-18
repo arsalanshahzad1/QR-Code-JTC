@@ -104,6 +104,7 @@ color: #e0201c;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 @media (max-width: 600px) {
