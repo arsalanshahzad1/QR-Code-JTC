@@ -6,6 +6,7 @@ import passIcon from "../../src/assets/pass-icon.png";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import apis from "../services/index"; // Adjust the import path as needed
 import Loader from "../components/Loader";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   const [pass, setPass] = useState(false);
@@ -29,10 +30,19 @@ const Login = () => {
     try {
       const { data } = await apis.authLogin({ email, password });
       const { user, token } = data?.data;
-      localStorage.setItem("userId", user?.id);
-      localStorage.setItem("token", token);
-      navigate("/home");
+      console.log(data,"datadata")
+      if(user?.type == "Coordinator")
+      {
+        localStorage.setItem("userId", user?.id);
+        localStorage.setItem("token", token);
+        toast.success("Login successfully");
+        navigate("/home");
+      }else{
+        toast.error("Invalid email or password");
+      }
+     
     } catch (err) {
+      toast.error("Invalid email or password");
       setError(err.message || "Login failed. Please try again.");
     } finally {
       setLoading(false); 
