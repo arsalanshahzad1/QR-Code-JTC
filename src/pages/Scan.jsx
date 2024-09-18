@@ -10,22 +10,31 @@ const Scan = () => {
   const [loading, setLoading] = useState(false);
 
   const submitHandler = (e) => {
-    if(!amount)
-    {
-      toast.error("Amout field required", { id: 1 });
-    }
     e.preventDefault();
+    
     setLoading(true);
-    // Simulate loading time (you can adjust or remove this timeout based on your actual implementation)
     setTimeout(() => {
-      // Update QR code value when the form is submitted
       setQrCodeValue(JSON.stringify({
         amount: amount,
         privateKey: "JTC-SCAN",
       }));
-      setLoading(false); // Hide loader once QR code is set
-    }, 1000); // Simulate network delay or processing time
+
+      
+      setLoading(false); 
+    }, 1000); 
+
+
+    setTimeout(() => {
+      setQrCodeValue(null);
+      setAmount("");
+    },20000);
+
   };
+
+
+
+
+
   return (
     <>
       <Header />
@@ -35,6 +44,7 @@ const Scan = () => {
           <form onSubmit={submitHandler} className="inputForm">
             <h1>Enter Amount:</h1>
             <input
+               required
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
