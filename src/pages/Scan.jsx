@@ -16,7 +16,7 @@ const Scan = () => {
       // Update QR code value when the form is submitted
       setQrCodeValue(JSON.stringify({
         amount: amount,
-        privateKey: "SCAN-JTC",
+        privateKey: "JTC-SCAN",
       }));
       setLoading(false); // Hide loader once QR code is set
     }, 1000); // Simulate network delay or processing time
