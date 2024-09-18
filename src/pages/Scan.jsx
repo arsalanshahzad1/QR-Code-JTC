@@ -25,9 +25,11 @@ const Scan = () => {
 
 
     setTimeout(() => {
+
+      toast.error("This code has expired");
       setQrCodeValue(null);
       setAmount("");
-    },20000);
+    },2000);
 
   };
 
