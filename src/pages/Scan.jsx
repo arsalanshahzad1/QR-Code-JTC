@@ -11,31 +11,33 @@ const Scan = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    
-    setLoading(true);
-    setTimeout(() => {
-      setQrCodeValue(JSON.stringify({
-        amount: amount,
-        privateKey: "JTC-SCAN",
-      }));
-
-      
-      setLoading(false); 
-    }, 1000); 
 
 
-    setTimeout(() => {
+    if (amount > 0 && !isNaN(amount)) {
+      setLoading(true);
+      setTimeout(() => {
+        setQrCodeValue(JSON.stringify({
+          amount: amount,
+          privateKey: "JTC-SCAN",
+        }));
+  
+        
+        setLoading(false); 
+      }, 1000); 
+  
 
-      toast.error("This code has expired");
-      setQrCodeValue(null);
-      setAmount("");
-    },60000);
-
+      setTimeout(() => {
+        toast.error("This code has expired");
+        setQrCodeValue(null);
+        setAmount("");
+      }, 60000);
+    } 
+    else {
+      if (amount <= 0) {
+        toast.error("Amount should be greater than zero");
+      } 
+    }
   };
-
-
-
-
 
   return (
     <>
@@ -46,7 +48,7 @@ const Scan = () => {
           <form onSubmit={submitHandler} className="inputForm">
             <h1>Enter Amount:</h1>
             <input
-               required
+              required
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
